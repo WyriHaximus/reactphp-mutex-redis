@@ -87,6 +87,14 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/wyrihaximusnet/php:${{ matrix.php }}-nts-buster-dev-root
+    services:
+      redis:
+        image: redis
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 1s
+          --health-timeout 5s
+          --health-retries 50
     steps:
       - uses: actions/checkout@v1
       - name: Cache composer packages
@@ -108,6 +116,7 @@ jobs:
         if: matrix.check == 'backward-compatibility-check'
       - run: make ${{ matrix.check }}
         env:
+          REDIS_DSN: redis://redis:6379/6
           COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
           COVERALLS_RUN_LOCALLY: ${{ secrets.COVERALLS_RUN_LOCALLY }}
   qodana:
