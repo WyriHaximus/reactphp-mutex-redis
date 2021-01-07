@@ -1,0 +1,32 @@
+{
+    "name": "wyrihaximus/react-mutex-redis",
+    "description": "Mutex locking for ReactPHP projects using Redis",
+    "license": "MIT",
+    "require": {
+        "php": "^7.4"
+    },
+    "config": {
+        "platform": {
+            "php": "7.4.7"
+        },
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "WyriHaximus\\React\\Redis\\Mutex\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "WyriHaximus\\Tests\\React\\Redis\\Mutex\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "composer normalize"
+        ],
+        "post-update-cmd": [
+            "composer normalize"
+        ]
+    }
+}
