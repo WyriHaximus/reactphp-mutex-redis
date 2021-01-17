@@ -20,8 +20,10 @@ else
 	PHP_VERSION:=$(shell docker run --rm -v "`pwd`:`pwd`" jess/jq jq -r -c '.config.platform.php' "`pwd`/composer.json" | php -r "echo str_replace('|', '.', explode('.', implode('|', explode('.', stream_get_contents(STDIN), 2)), 2)[0]);")
 	DOCKER_RUN:=docker run --rm -it \
 		-v "`pwd`:`pwd`" \
+		--network host \
 		-v "${COMPOSER_CACHE_DIR}:/home/app/.composer/cache" \
 		-w "`pwd`" \
+		-e REDIS_DSN="${REDIS_DSN}" \
 		"ghcr.io/wyrihaximusnet/php:${PHP_VERSION}-nts-alpine3.12-dev"
 endif
 
