@@ -8,7 +8,7 @@ use Clue\React\Redis\Factory;
 use React\EventLoop\LoopInterface;
 use RTCKit\React\Redlock\Custodian;
 use WyriHaximus\React\Mutex\AbstractMutexTestCase;
-use WyriHaximus\React\Mutex\MutexInterface;
+use WyriHaximus\React\Mutex\Contracts\MutexInterface;
 use WyriHaximus\React\Redis\Mutex\Mutex;
 
 use function getenv;

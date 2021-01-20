@@ -6,10 +6,12 @@
         "php": "^7.4",
         "react/promise": "^2.8",
         "rtckit/react-redlock": "^1.0",
-        "wyrihaximus/react-mutex": "dev-master"
+        "wyrihaximus/react-mutex": "dev-master",
+        "wyrihaximus/react-mutex-contracts": "dev-master"
     },
     "require-dev": {
-        "clue/redis-react": "^2.4"
+        "clue/redis-react": "^2.4",
+        "wyrihaximus/react-mutex-test-utilities": "dev-master"
     },
     "config": {
         "platform": {

@@ -7,8 +7,9 @@ namespace WyriHaximus\React\Redis\Mutex;
 use React\Promise\PromiseInterface;
 use RTCKit\React\Redlock\Custodian;
 use RTCKit\React\Redlock\Lock as RedisLock;
+use WyriHaximus\React\Mutex\Contracts\LockInterface;
+use WyriHaximus\React\Mutex\Contracts\MutexInterface;
 use WyriHaximus\React\Mutex\Lock;
-use WyriHaximus\React\Mutex\MutexInterface;
 
 use const WyriHaximus\Constants\Numeric\ONE_FLOAT;
 
@@ -28,8 +29,8 @@ final class Mutex implements MutexInterface
         );
     }
 
-    public function release(Lock $lock): PromiseInterface
+    public function release(LockInterface $lock): PromiseInterface
     {
-        return $this->custodian->release(new RedisLock($lock->getKey(), ONE_FLOAT, $lock->getRng()));
+        return $this->custodian->release(new RedisLock($lock->key(), ONE_FLOAT, $lock->rng()));
     }
 }
