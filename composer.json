@@ -7,11 +7,11 @@
         "react/promise": "^2.8",
         "rtckit/react-redlock": "^1.0",
         "wyrihaximus/react-mutex": "dev-master",
-        "wyrihaximus/react-mutex-contracts": "dev-master"
+        "wyrihaximus/react-mutex-contracts": "^1.0"
     },
     "require-dev": {
         "clue/redis-react": "^2.4",
-        "wyrihaximus/react-mutex-test-utilities": "dev-master"
+        "wyrihaximus/react-mutex-test-utilities": "^1.0"
     },
     "config": {
         "platform": {
