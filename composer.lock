@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9813bbf769b99ab0529cb7e917994439",
+    "content-hash": "fbc51e5e62c925fedb31589b37227d7f",
     "packages": [
         {
             "name": "clue/redis-protocol",
@@ -719,16 +719,16 @@
         },
         {
             "name": "wyrihaximus/react-mutex",
-            "version": "dev-master",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/reactphp-mutex.git",
-                "reference": "fe4b4f08dd8726e49bcbb5f390e7128e3bfaccfb"
+                "reference": "a7349a9d54b49568609ca714744255163f4a26ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/reactphp-mutex/zipball/fe4b4f08dd8726e49bcbb5f390e7128e3bfaccfb",
-                "reference": "fe4b4f08dd8726e49bcbb5f390e7128e3bfaccfb",
+                "url": "https://api.github.com/repos/WyriHaximus/reactphp-mutex/zipball/a7349a9d54b49568609ca714744255163f4a26ac",
+                "reference": "a7349a9d54b49568609ca714744255163f4a26ac",
                 "shasum": ""
             },
             "require": {
@@ -743,7 +743,6 @@
             "require-dev": {
                 "wyrihaximus/react-mutex-test-utilities": "^1.0"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -757,7 +756,7 @@
             "description": "Mutex locking for ReactPHP projects",
             "support": {
                 "issues": "https://github.com/WyriHaximus/reactphp-mutex/issues",
-                "source": "https://github.com/WyriHaximus/reactphp-mutex/tree/master"
+                "source": "https://github.com/WyriHaximus/reactphp-mutex/tree/2.0.0"
             },
             "funding": [
                 {
@@ -765,7 +764,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-01-21T19:57:46+00:00"
+            "time": "2021-01-22T18:19:54+00:00"
         },
         {
             "name": "wyrihaximus/react-mutex-contracts",
@@ -9032,9 +9031,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "wyrihaximus/react-mutex": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
