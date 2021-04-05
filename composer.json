@@ -7,7 +7,7 @@
         "react/promise": "^2.8",
         "rtckit/react-redlock": "^1.0",
         "wyrihaximus/react-mutex": "^2.0",
-        "wyrihaximus/react-mutex-contracts": "^1.0"
+        "wyrihaximus/react-mutex-contracts": "^1.1"
     },
     "require-dev": {
         "clue/redis-react": "^2.4",
