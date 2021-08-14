@@ -5,19 +5,24 @@
     "require": {
         "php": "^7.4",
         "react/promise": "^2.8",
-        "rtckit/react-redlock": "^1.0",
-        "wyrihaximus/react-mutex": "^2.0",
-        "wyrihaximus/react-mutex-contracts": "^1.1"
+        "react/stream": "^1.2",
+        "rtckit/react-redlock": "^1",
+        "wyrihaximus/react-mutex-contracts": "^2"
     },
     "require-dev": {
         "clue/redis-react": "^2.4",
-        "wyrihaximus/react-mutex-test-utilities": "^1.0"
+        "wyrihaximus/react-mutex-test-utilities": "^2"
     },
     "config": {
         "platform": {
             "php": "7.4.7"
         },
         "sort-packages": true
+    },
+    "extra": {
+        "unused": [
+            "react/stream"
+        ]
     },
     "autoload": {
         "psr-4": {
