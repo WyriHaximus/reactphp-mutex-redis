@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "de3b0aa4399c7a0e9dc37aeea9f6afde",
+    "content-hash": "e23cadf9ce9fc3118670d19b4e77a404",
     "packages": [
         {
             "name": "clue/redis-protocol",
@@ -704,26 +704,27 @@
         },
         {
             "name": "rtckit/react-redlock",
-            "version": "1.0.0",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rtckit/reactphp-redlock.git",
-                "reference": "ab552a28f4eeb4428c031f08a5e1b219430f1b53"
+                "reference": "de054943eb9e9931669c87908242f49c274727ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rtckit/reactphp-redlock/zipball/ab552a28f4eeb4428c031f08a5e1b219430f1b53",
-                "reference": "ab552a28f4eeb4428c031f08a5e1b219430f1b53",
+                "url": "https://api.github.com/repos/rtckit/reactphp-redlock/zipball/de054943eb9e9931669c87908242f49c274727ad",
+                "reference": "de054943eb9e9931669c87908242f49c274727ad",
                 "shasum": ""
             },
             "require": {
-                "clue/redis-react": "^2.0",
-                "php": ">=7.2"
+                "clue/redis-react": "^2.4",
+                "php": ">=7.2",
+                "react/event-loop": "^1.2"
             },
             "require-dev": {
                 "phpstan/phpstan": "^0.12",
-                "phpunit/phpunit": "^9.4",
-                "vimeo/psalm": "^4.0"
+                "phpunit/phpunit": "^9.5",
+                "vimeo/psalm": "^4.9"
             },
             "type": "library",
             "autoload": {
@@ -753,9 +754,9 @@
             "support": {
                 "email": "hello@rtckit.io",
                 "issues": "https://github.com/rtckit/reactphp-redlock/issues",
-                "source": "https://github.com/rtckit/reactphp-redlock/tree/v1.0.0"
+                "source": "https://github.com/rtckit/reactphp-redlock/tree/v2.0.0"
             },
-            "time": "2020-11-20T21:46:27+00:00"
+            "time": "2021-08-17T21:28:08+00:00"
         },
         {
             "name": "wyrihaximus/react-mutex-contracts",
