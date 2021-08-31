@@ -18,6 +18,6 @@ final class MutexTest extends AbstractMutexTestCase
     public function provideMutex(): MutexInterface
     {
         /** @phpstan-ignore-next-line */
-        return new Mutex(new Custodian(Loop::get(), (new Factory(Loop::get()))->createLazyClient(getenv('REDIS_DSN'))));
+        return new Mutex(new Custodian((new Factory(Loop::get()))->createLazyClient(getenv('REDIS_DSN'))));
     }
 }
