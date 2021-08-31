@@ -10,7 +10,7 @@
         "wyrihaximus/react-mutex-contracts": "^2"
     },
     "require-dev": {
-        "clue/redis-react": "^2.4",
+        "clue/redis-react": "^2.5",
         "wyrihaximus/react-mutex-test-utilities": "^2"
     },
     "config": {
