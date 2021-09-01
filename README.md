@@ -24,12 +24,10 @@ wrapper around it.
 <?php
 
 use Clue\React\Redis\Factory;
-use React\EventLoop\Factory as EventLoopFactory;
 use RTCKit\React\Redlock\Custodian;
 use WyriHaximus\React\Redis\Mutex\Mutex;
 
-$loop = EventLoopFactory::create();
-$mutex = new Mutex(new Custodian($loop, (new Factory($loop))->createLazyClient('redis://localhost:6379/13'))); // Use DB 13 as mutex database
+$mutex = new Mutex(new Custodian((new Factory())->createLazyClient('redis://localhost:6379/13'))); // Use DB 13 as mutex database
 $lock = $mutex->acquire('key', 1.23);
 $mutex->release($lock);
 ```
