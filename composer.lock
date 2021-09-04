@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "739b2c3985452656243ab9933554f0f8",
+    "content-hash": "01f8e284ba9f945a32388265def3c8ec",
     "packages": [
         {
             "name": "clue/redis-protocol",
@@ -6651,6 +6651,7 @@
                     "type": "github"
                 }
             ],
+            "abandoned": true,
             "time": "2020-09-28T06:45:17+00:00"
         },
         {
@@ -9243,7 +9244,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.4"
+        "php": "^8 || ^7.4"
     },
     "platform-dev": [],
     "platform-overrides": {

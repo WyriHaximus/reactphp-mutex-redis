@@ -3,7 +3,7 @@
     "description": "Mutex locking for ReactPHP projects using Redis",
     "license": "MIT",
     "require": {
-        "php": "^7.4",
+        "php": "^8 || ^7.4",
         "react/promise": "^2.8",
         "react/stream": "^1.2",
         "rtckit/react-redlock": "^2",
