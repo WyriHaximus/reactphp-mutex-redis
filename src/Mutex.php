@@ -14,24 +14,23 @@ use const WyriHaximus\Constants\Numeric\ONE_FLOAT;
 
 final class Mutex implements MutexInterface
 {
-    private Custodian $custodian;
-
-    public function __construct(Custodian $custodian)
+    public function __construct(private Custodian $custodian)
     {
-        $this->custodian = $custodian;
     }
 
     public function acquire(string $key, float $ttl): PromiseInterface
     {
         return $this->custodian->acquire($key, $ttl)->then(
-            static fn (?RedisLock $redisLock): ?Lock => $redisLock instanceof RedisLock ? new Lock($redisLock->getResource(), $redisLock->getToken()) : null
+            /** @phpstan-ignore-next-line */
+            static fn (RedisLock|null $redisLock): Lock|null => $redisLock instanceof RedisLock ? new Lock($redisLock->getResource(), $redisLock->getToken()) : null,
         );
     }
 
     public function spin(string $key, float $ttl, int $attempts, float $interval): PromiseInterface
     {
         return $this->custodian->spin($attempts, $interval, $key, $ttl)->then(
-            static fn (?RedisLock $redisLock): ?Lock => $redisLock instanceof RedisLock ? new Lock($redisLock->getResource(), $redisLock->getToken()) : null
+            /** @phpstan-ignore-next-line */
+            static fn (RedisLock|null $redisLock): Lock|null => $redisLock instanceof RedisLock ? new Lock($redisLock->getResource(), $redisLock->getToken()) : null,
         );
     }
 
