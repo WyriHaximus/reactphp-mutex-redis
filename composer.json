@@ -4,7 +4,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
-        "react/promise": "^2.8 || ^3.1",
+        "react/promise": "^3.1",
         "rtckit/react-redlock": "^2",
         "wyrihaximus/react-mutex-contracts": "^2.2"
     },
